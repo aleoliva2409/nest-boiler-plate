@@ -37,7 +37,7 @@ For first time
 pnpm exec husky init
 ```
 
-Add commands into .husky folder
+__Add commands into .husky folder:__
 
 pre-commmit
 ```bash
