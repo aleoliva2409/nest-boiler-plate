@@ -37,6 +37,30 @@ For first time
 pnpm exec husky init
 ```
 
+Add commands into .husky folder
+
+pre-commmit
+```bash
+# copy this into .husky/pre-commmit
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm lint-staged
+
+```
+
+commit-msg
+```bash
+# copy this into .husky/pre-commmit
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
+
+```
+
 ## Migrations
 
 Create a migration
