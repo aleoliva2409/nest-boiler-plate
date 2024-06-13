@@ -33,7 +33,7 @@ $ pnpm run start:prod
 For first time
 
 ```bash
-# add next command into package.json
+# add next command into package.json or run on console
 pnpm exec husky
 ```
 
