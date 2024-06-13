@@ -34,7 +34,7 @@ For first time
 
 ```bash
 # add next command into package.json
-pnpm exec husky init
+pnpm exec husky
 ```
 
 __Add commands into .husky folder:__
@@ -59,6 +59,20 @@ commit-msg
 
 npx --no -- commitlint --edit ${1}
 
+```
+
+__or run these commands manually:__
+
+pre-commmit
+```bash
+echo "pnpm lint-staged" > .husky/pre-commit
+```
+
+commit-msg
+```bash
+# use one of both
+echo "npx --no -- commitlint --edit ${1}" > .husky/commit-msg
+echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
 ```
 
 ## Migrations
