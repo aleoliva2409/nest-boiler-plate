@@ -30,6 +30,8 @@ $ pnpm run start:prod
 
 ## Husky
 
+Read docs to install husky [here](https://typicode.github.io/husky/how-to.html)
+
 For first time
 
 ```bash
@@ -37,9 +39,10 @@ For first time
 pnpm exec husky
 ```
 
-__Add commands into .husky folder:__
+**Add commands into .husky folder:**
 
 pre-commmit
+
 ```bash
 # copy this into .husky/pre-commmit
 
@@ -51,6 +54,7 @@ pnpm lint-staged
 ```
 
 commit-msg
+
 ```bash
 # copy this into .husky/pre-commmit
 
@@ -61,14 +65,16 @@ npx --no -- commitlint --edit ${1}
 
 ```
 
-__or run these commands manually:__
+**or run these commands manually:**
 
 pre-commmit
+
 ```bash
 echo "pnpm lint-staged" > .husky/pre-commit
 ```
 
 commit-msg
+
 ```bash
 # use one of both
 echo "npx --no -- commitlint --edit ${1}" > .husky/commit-msg
